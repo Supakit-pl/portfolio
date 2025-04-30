@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">MyPortfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="section fade-in">
+    <div class="container">
+      <img src="images/profile.jpg" alt="Profile Picture" class="profile" />
+      <h2>About Me</h2>
+      <p>Hello! My name is Supakit Plengplang, also known as Oat. I am a
+        student at Kasetsart University, Sriracha Campus, in the
+        Faculty of Science, majoring in Information Technology.
+        I have a strong passion for IT and programming, and I aspire to
+        become a Full-Stack Developer. Last year, I worked on three
+        projects with my team. For two of them, I was responsible for
+        the frontend, while the third was a research project involving
+        data mining.
+        Through these experiences, I have gained proficiency in
+        frontend development using HTML, CSS, and JavaScript. I
+        have also experimented with React Framework, though I have
+        not yet used it in a real project. Additionally, I am skilled in UI
+        design using Figma.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section fade-in">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" onclick="openModal('To-Do App', 'A simple task manager built with vanilla JS. Users can add, delete, and mark tasks as completed. Built with HTML, CSS, JS.')">
+          <img src="images/Parking.png" alt="Parking Screenshot" class="project-img">
+          <h3>Parking reservation website</h3>
+          <p>I have worked on designing the frontend layout for an online parking reservation website.</p>
+          <a href="https://gitlab.com/realpark/realpark.git" target="_blank">View Project</a>
+        </div>
+        <div class="project-card" onclick="openModal('Weather App', 'A weather app using OpenWeather API that displays current temperature, humidity, and conditions for any city.')">
+          <img src="images/E-commerce.png" alt="E-commerce Screenshot" class="project-img">
+          <h3>E-commerce website</h3>
+          <p>I contributed to the frontend development of an E-commerce website focused on fashion products. This was my first group project, collaboratively developed with my classmates.</p>
+          <a href="https://gitlab.com/Ku6754539/f1rstclothes.git" target="_blank">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section fade-in">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyPortfolio | Designed by SUPAKIT PLENGPLANG</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
